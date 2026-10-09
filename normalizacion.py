@@ -41,11 +41,9 @@ def normalizar_distancia(valor):
     if not coincidencia:
         return None
 
-    # Convertimos la coma decimal a punto para que float pueda leerla.
     numero = coincidencia.group(0).replace(",", ".")
     distancia = float(numero)
 
-    # Unificamos las formas redondeadas de maratón y media maratón.
     if 41.9 <= distancia <= 42.3:
         return 42.195
     if 20.9 <= distancia <= 21.2:
